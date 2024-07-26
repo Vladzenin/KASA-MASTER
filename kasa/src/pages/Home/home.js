@@ -3,7 +3,7 @@ import React from "react";
 import Banner from "../../components/Banner/Banner";
 import Gallery from "../../components/Gallery/Gallery";
 
-import bannerHome from "../../assets/img/Banner/banner-home.webp";
+import bannerHome from "../../assets/img/Banner/banner-home.jpg";
 
 import styles from "./home.module.scss";
 
