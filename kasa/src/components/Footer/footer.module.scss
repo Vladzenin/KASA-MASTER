@@ -1,0 +1,34 @@
+@use "../../utils/" as *;
+
+.container {
+    background: map-get($colors, footer);
+    width: 100%;
+    height: 15vh;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+
+        @include mobile {
+            gap: 15px;
+        }
+    }
+
+    .text {
+        color: map-get($colors, basic-text);
+        @include font(16px, 500);
+
+        @include mobile {
+            @include font(12px);
+            max-width: 100px;
+            line-height: 17px;
+        }
+    }
+}
