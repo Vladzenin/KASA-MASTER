@@ -3,14 +3,12 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { ThemeContext } from "../../context/ThemeContext"
 import logo from "../../assets/img/Logo/logo.svg";
 import styles from "./header.module.scss";
-import { ToggleButton } from "./ToggleButton";
-import LanguageButton from "./LanguageButton"; // Importez le composant LanguageButton
 
 const Header = () => {
     // On utilise ce hook react routeur pour determiner que quelle page on se trouve et appliquer l'underline
     const location = useLocation();
-    const { toggleTheme } = useContext(ThemeContext);
-
+    // eslint-disable-next-line no-unused-vars
+    const { theme } = useContext(ThemeContext);
     return (
         <header className={styles.container}>
             <Link to="/home">
@@ -44,13 +42,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            <nav className={styles.togglenav}>
-                {/* Bouton Toggle pour changer le language */}
-                <LanguageButton />
-
-                {/* Bouton Toggle pour changer le thème */}
-                <ToggleButton onClick={toggleTheme} />
-            </nav>
+        
         </header>
     );
 };

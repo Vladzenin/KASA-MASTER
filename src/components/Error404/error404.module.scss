@@ -40,7 +40,7 @@
     }
     .backwardLink {
         @include font(18px, 500);
-        color: map-get($colors, primary);
+        color: map-get($colors, footer);
         text-decoration: underline;
 
         &:hover {

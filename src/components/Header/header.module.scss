@@ -37,7 +37,7 @@
 
         .item {
             .link {
-                color: map-get($colors, primary);
+                color: map-get($colors, footer);
                 @include font(18px, 500);
 
                 &:hover {
